@@ -1,0 +1,192 @@
+package com.madehuge_nishant.videostreamer.DataModels;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+import io.realm.RealmObject;
+
+public class video_list extends RealmObject implements  Serializable {
+
+
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("user_id")
+    @Expose
+    private String userId;
+    @SerializedName("uploaded_date")
+    @Expose
+    private String uploadedDate;
+    @SerializedName("category_name")
+    @Expose
+    private String categoryName;
+    @SerializedName("uploaded_by")
+    @Expose
+    private String uploadedBy;
+    @SerializedName("title")
+    @Expose
+    private String title;
+    @SerializedName("description")
+    @Expose
+    private String description;
+    @SerializedName("category")
+    @Expose
+    private String category;
+    @SerializedName("video")
+    @Expose
+    private String video;
+    @SerializedName("like")
+    @Expose
+    private String like;
+    @SerializedName("viewcount")
+    @Expose
+    private String viewcount;
+    @SerializedName("image")
+    @Expose
+    private String image;
+    @SerializedName("like_user_id")
+    @Expose
+    private String likeUserId;
+    @SerializedName("parmot_id")
+    @Expose
+    private String parmot_id;
+    @SerializedName("parmot_name")
+    @Expose
+    private String parmot_name;
+
+    public String getParmot_id() {
+        return parmot_id;
+    }
+
+    public void setParmot_id(String parmot_id) {
+        this.parmot_id = parmot_id;
+    }
+
+    public String getParmot_name() {
+        return parmot_name;
+    }
+
+    public void setParmot_name(String parmot_name) {
+        this.parmot_name = parmot_name;
+    }
+
+
+
+    public String getTotalComment() {
+        return totalComment;
+    }
+
+    public void setTotalComment(String totalComment) {
+        this.totalComment = totalComment;
+    }
+
+    @SerializedName("total_comment")
+    @Expose
+    private String totalComment;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getUploadedDate() {
+        return uploadedDate;
+    }
+
+    public void setUploadedDate(String uploadedDate) {
+        this.uploadedDate = uploadedDate;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public String getUploadedBy() {
+        return uploadedBy;
+    }
+
+    public void setUploadedBy(String uploadedBy) {
+        this.uploadedBy = uploadedBy;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
+    public String getLike() {
+        return like;
+    }
+
+    public void setLike(String like) {
+        this.like = like;
+    }
+
+    public String getViewcount() {
+        return viewcount;
+    }
+
+    public void setViewcount(String viewcount) {
+        this.viewcount = viewcount;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getLikeUserId() {
+        return likeUserId;
+    }
+
+    public void setLikeUserId(String likeUserId) {
+        this.likeUserId = likeUserId;
+    }
+}

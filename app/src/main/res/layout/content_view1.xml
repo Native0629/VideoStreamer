@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_video"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:layout_marginBottom="12dp"
+    tools:ignore="MissingDefaultResource"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardBackgroundColor="@color/FloralWhite"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+<RelativeLayout
+    android:layout_weight="1.2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_centerInParent="true"
+            android:tint="@color/white"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
+            <LinearLayout
+                android:layout_weight=".8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:weightSum="1"
+                 >
+
+                <TextView
+                    android:layout_weight=".9"
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="title"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:textColor="@color/Black"
+                    android:textSize="15dp"
+                    />
+
+                 <TextView
+                     android:layout_weight=".1"
+                     android:id="@+id/textViewOptions"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     android:gravity="center_horizontal"
+                     android:text="&#8942;"
+                     android:textColor="@color/Black"
+                     android:textStyle="bold"
+                     android:textAppearance="?android:textAppearanceMedium" />
+
+             </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="12.5dp"
+        android:layout_marginLeft="5dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/Black"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="3dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_total_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total likes"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="3dp"
+                android:textStyle="italic"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_total_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total likes"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textStyle="italic"
+                android:textSize="12dp"
+
+                />
+        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_category_date_dur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category | Date | Durations"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="6dp"
+                    android:textStyle="italic"
+                    android:textSize="@dimen/margin_10"
+                    android:lineSpacingMultiplier="1.1"
+
+                    />
+    </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+

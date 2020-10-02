@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_top_videos"
+                android:text="Sorry,No Videos found"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Rv_top_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@color/White"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_video4"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:background="@drawable/play"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_video4"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Most-Viewed Videos"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_videos4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_mostviewed_videos"
+                android:text="Sorry,No Videos found"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_mostviewed_videos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:descendantFocusability="blocksDescendants"
+                android:background="@color/White"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/ic_cat_vid"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_cat"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Videos By Categories"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_toRightOf="@+id/ic_cat_vid"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_videos_by_cat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_videos_cat"
+                android:text="Sorry,No Videos category found"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_videos_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/White"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_video1"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:background="@drawable/play"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_video1"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promoted Videos"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_videos1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_promoted_videos"
+                android:text="Sorry,No Videos found"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_promoted_videos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:descendantFocusability="blocksDescendants"
+                android:background="@color/White"
+                >
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_video2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:src="@drawable/article"
+                android:tint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_video2"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Most-Viewed Pictures"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_videos2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_mostviewed_pictures"
+                android:text="Sorry,No Most viewed pictures found"
+                android:layout_centerInParent="true"
+                android:textColor="@color/Black"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_mostviewed_pictures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_video5"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:src="@drawable/article"
+                android:tint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_video5"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promoted Pictures"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_videos5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_promoted_pictures"
+                android:text="Sorry,No Promoted pictures found"
+                android:layout_centerInParent="true"
+                android:textColor="@color/Black"
+                android:textAlignment="center"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_promoted_pictures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_video6"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:background="@drawable/play"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_video6"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Videos"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_videos6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="195dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_videos6"
+                android:text="Sorry,No Videos found"
+                android:layout_centerInParent="true"
+                android:textColor="@color/Black"
+                android:textAlignment="center"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_recent_videos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+        <ImageView
+            android:id="@+id/ic_video"
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end"
+            android:background="@drawable/play"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_toRightOf="@+id/ic_video"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Videos"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="10dp"
+            android:textColor="@color/Black"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_view_more_videos"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_right_arrow"
+            />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="195dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_no_videos"
+            android:text="Sorry,No Videos found"
+            android:layout_centerInParent="true"
+            android:textColor="@color/Black"
+            android:textAlignment="center"
+
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Rv_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+
+            >
+
+        </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/ic_cat_art"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_cat"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pictures By Categories"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_toRightOf="@+id/ic_cat_art"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_article_by_cat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_article_cat"
+                android:text="Sorry,No Videos category found"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_article_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/White"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_video8"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:src="@drawable/article"
+                android:tint="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_video8"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Pictures"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_videos8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_promoted_pictures8"
+                android:text="Sorry,No Recent pictures found"
+                android:layout_centerInParent="true"
+                android:textColor="@color/Black"
+                android:textAlignment="center"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Rv_recent_pictures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_color1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_articles"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:src="@drawable/article"
+                android:layout_centerVertical="true"
+                android:tint="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/ic_articles"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pictures"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_view_more_articles"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_right_arrow"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_no_article"
+            android:text="Sorry,No Pictures found"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/Black"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Rv_articles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+
+            >
+
+        </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

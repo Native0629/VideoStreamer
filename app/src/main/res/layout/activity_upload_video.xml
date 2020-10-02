@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Upload_video">
+
+   <EditText
+       android:id="@+id/et_video_title"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/border_black"
+       android:padding="15dp"
+       android:hint="Video title"
+       android:layout_marginTop="15dp"
+       />
+
+    <EditText
+        android:id="@+id/et_video_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_black"
+        android:padding="15dp"
+        android:hint="Video desc"
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        />
+
+    <EditText
+        android:id="@+id/et_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_black"
+        android:padding="15dp"
+        android:hint="Category"
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        android:visibility="gone"
+        />
+
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/sspCategory"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        app:hintText="Select Category"
+        android:background="@drawable/border_black"
+        style="@style/SpinnerTheme"
+        />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/sspPromotevideo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        app:hintText="Promote Video"
+        android:background="@drawable/border_black"
+        style="@style/SpinnerTheme"
+        />
+
+
+    <Button
+        android:id="@+id/btn_add_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_black"
+        android:layout_marginTop="20dp"
+        android:text="+ Add Thumbnail File\nNo File Selected"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/btn_add_videofile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_black"
+        android:layout_marginTop="20dp"
+        android:text="+ Add Video file\nNo File Selected"
+        android:textAllCaps="false"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_upload"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border1"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/btn_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_upload_videos"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
